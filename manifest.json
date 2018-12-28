@@ -1,0 +1,31 @@
+{
+  "name": "四季",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "四季を代表するモノたちが画面内を降り注ぎます。お試しあれ！",
+  "icons": {
+    "16": "img/icon/icon_16.png",
+    "48": "img/icon/icon_48.png",
+    "128": "img/icon/icon_128.png"
+  },
+  "browser_action": {
+    "default_title": "四季",
+    "default_icon": {
+      "19": "img/icon/icon_19.png",
+      "38": "img/icon/icon_38.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "js/jquery-2.1.3.min.js",
+        "js/p5.min.js",
+        "js/content_scripts/content_script.js"
+      ],
+      "css": ["css/content_scripts/season.css"]
+    }
+  ],
+  "permissions": ["tabs", "https://*/*", "http://*/*"]
+}

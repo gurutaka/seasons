@@ -1,0 +1,33 @@
+body {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  font-family: "Noto Serif SC", serif;
+}
+
+.iconImg {
+  cursor: pointer;
+  display: block;
+  -webkit-transform: rotate(0) scale(1);
+  transform: rotate(0) scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.iconWrapper {
+  margin: 0 auto;
+  width: 40px;
+}
+
+.seasonIcon:hover {
+  -webkit-transform: rotate(15deg) scale(1.2);
+  transform: rotate(15deg) scale(1.2);
+}
+
+.stopIcon:hover {
+  opacity: 0.8;
+}
+
+.iconWrapper > .iconImg + .iconImg {
+  margin-top: 15px;
+}
